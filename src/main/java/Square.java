@@ -5,6 +5,14 @@ public class Square implements Shape{
         this.side = side;
     }
 
+    public void setSide(double side) {
+        this.side = side;
+    }
+
+    public double getSide() {
+        return side;
+    }
+
     @Override
     public double ComputeArea() {
         return side * side;

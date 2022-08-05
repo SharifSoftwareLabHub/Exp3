@@ -66,4 +66,25 @@ public class ShapeTest {
         result = zeroSquare.ComputeArea();
         assertEquals(0, result, 0.05);
     }
+
+    @Test
+    public void testSetSquareSide() {
+        Square square = new Square(2);
+        double result = square.ComputeArea();
+        assertEquals(4, result, 0.05);
+
+        square.setSide(5);
+        assertEquals(25, square.ComputeArea(), 0.05);
+    }
+
+    @Test
+    public  void testGetSquareSide(){
+        Square square = new Square(3);
+        double side = square.getSide();
+        assertEquals(3, side, 0.05);
+
+        square.setSide(6);
+        side = square.getSide();
+        assertEquals(6, side, 0.05);
+    }
 }
