@@ -15,6 +15,14 @@ public class RectAngle implements Shape{
         return this.width;
     }
 
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getHeight() {
+        return this.height;
+    }
+
     @Override
     public double ComputeArea() {
         return this.width * this.height;

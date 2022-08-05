@@ -12,7 +12,6 @@ public class ShapeTest {
         RectAngle zeroRect = new RectAngle(0, 3);
         result = zeroRect.ComputeArea();
         assertEquals(0, result, 0.05);
-
     }
 
     @Test
@@ -34,5 +33,26 @@ public class ShapeTest {
         rectAngle.setWidth(6);
         width = rectAngle.getWidth();
         assertEquals(6, width, 0.05);
+    }
+
+    @Test
+    public void testSetRectangleHeight() {
+        RectAngle rectAngle = new RectAngle(3, 2);
+        double result = rectAngle.ComputeArea();
+        assertEquals(6, result, 0.05);
+
+        rectAngle.setHeight(5);
+        assertEquals(15, rectAngle.ComputeArea(), 0.05);
+    }
+
+    @Test
+    public  void testGetRectangleHeight(){
+        RectAngle rectAngle = new RectAngle(3,2);
+        double height = rectAngle.getHeight();
+        assertEquals(2, height, 0.05);
+
+        rectAngle.setHeight(6);
+        height = rectAngle.getHeight();
+        assertEquals(6, height, 0.05);
     }
 }
