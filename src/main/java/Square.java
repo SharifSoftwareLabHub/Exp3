@@ -4,4 +4,9 @@ public class Square implements Shape{
     public Square(double side) {
         this.side = side;
     }
+
+    @Override
+    public double ComputeArea() {
+        return side * side;
+    }
 }
