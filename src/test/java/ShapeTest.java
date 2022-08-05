@@ -55,4 +55,15 @@ public class ShapeTest {
         height = rectAngle.getHeight();
         assertEquals(6, height, 0.05);
     }
+
+    @Test
+    public void testSquareArea() {
+        Shape square = new Square(2);
+        double result = square.ComputeArea();
+        assertEquals(4, result, 0.05);
+
+        Square zeroSquare = new Square(0);
+        result = zeroSquare.ComputeArea();
+        assertEquals(0, result, 0.05);
+    }
 }
